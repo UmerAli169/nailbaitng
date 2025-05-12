@@ -29,15 +29,15 @@ function OnBordinga() {
         /> 
         <IonIcon
           src={star}
-          className="max-w-[48] max-h-[48] min-w-[38px] min-h-[38px] absolute top-[401px] left-[49px]"
+          className="max-w-[48] max-h-[48] min-w-[38px] min-h-[38px] absolute top-[351px] left-[59px]"
         />
         <IonIcon
           src={b1}
-          className=" min-w-[138px] min-h-[138px] absolute top-[241px] right-[21px]"
+          className="w-full max-w-[222px] max-h-[222px] h-full absolute top-[180px] right-[21px]"
         />
         <IonIcon
           src={c1}
-          className=" min-w-[138px] min-h-[138px] absolute top-[441px] left-[21px]"
+          className="  max-w-[222px] max-h-[222px] w-full h-full absolute top-[371px] left-[21px]"
         /> <IonIcon
           src={sunshin}
           className="h-[38px] w-[38px] absolute top-[441px] right-[51px]"

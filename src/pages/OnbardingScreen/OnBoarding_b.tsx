@@ -67,7 +67,8 @@ function OnBordinga() {
         </div>
       </div>
       <p className="text-gray-700 text-[12px] w-full text-center font-semibold underline mt-[20px]">
-スキップ      </p>
+        スキップ{" "}
+      </p>
     </div>
   );
 }
