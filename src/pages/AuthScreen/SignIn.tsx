@@ -1,85 +1,145 @@
-import React, { useState } from 'react';
-import { Formik, Form } from 'formik';
-import * as Yup from 'yup';
-import { useIonRouter } from '@ionic/react';
-import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { useState } from "react";
+import { Formik } from "formik";
+import { Eye, EyeOff } from "lucide-react";
 
-import InputField from '../../components/shared/Input';
-import Button from '../../components/shared/Button';
+import SignUP from "../../assets/auth/SignUP.svg";
+import BackArrow from "../../assets/shared/backArrow.svg";
+import account from "../../assets/auth/account.svg";
+import email from "../../assets/auth/email.svg";
+import password from "../../assets/auth/password.svg";
+import accountFilled from "../../assets/auth/accountFilled.svg";
+import passwordFilled from "../../assets/auth/passwordFilled.svg";
+import passwordlFilled from "../../assets/auth/filledPassword.svg";
+import SuggestionIcon from "../../assets/shared/SuggestionIcon.svg";
+import CheckIcon from "../../assets/shared/checkIcon.svg";
+
+import InputField from "../../components/shared/Input";
+import PasswordChecklist from "../../components/shared/PasswordCheck";
+import Checkbox from "../../components/shared/Checkbox";
+import Button from "../../components/shared/Button";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const router = useIonRouter();
-
-  const validationSchema = Yup.object({
-    email: Yup.string().email('Invalid email').required('Email is required'),
-    password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
-  });
+  const [passwordTouched, setPasswordTouched] = useState(false);
 
   return (
-    <div className="flex flex-col justify-center min-h-screen bg-white px-6">
-      <h1 className="text-3xl font-bold text-black mb-2">おかえりなさい!</h1>
-      <p className="text-gray-500 mb-8">アカウントにログインしてください</p>
+    <div className="w-full max-w-[768px] relative">
+      <div>
+        <img
+          src={SignUP}
+          className="w-[280px] h-[376px] absolute top-[-40px] right-0"
+          alt="SignUp Illustration"
+        />
+        <img
+          src={BackArrow}
+          className="w-[40px] h-[40px] absolute top-[60px] left-[16px]"
+          alt="Back"
+        />
+      </div>
 
-      <Formik
-        initialValues={{ email: '', password: '' }}
-        validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
-          setTimeout(() => {
-            setSubmitting(false);
-          }, 1000);
-        }}
-      >
-        {({ isSubmitting }) => (
-          <Form className="space-y-6">
-            <InputField
-              name="email"
-              label="メール"
-              placeholder="メールアドレス"
-              icon={Mail}
-              type="email"
-            />
+      <div className="mt-[116px] ml-[24px] max-w-[278px] w-full space-y-[8px]">
+        <h1 className="text-[#111827] font-normal text-[24px] leading-[135%]">
+          おかえりなさい
+        </h1>
+        <p className="text-[#9CA3AF] font-normal text-[16px] leading-[150%]">
+          アカウントにログインしてください
+        </p>
+      </div>
 
-            <InputField
-              name="password"
-              label="パスワード"
-              placeholder="パスワード"
-              icon={Lock}
-              type={showPassword ? 'text' : 'password'}
-              iconRight={
-                <button type="button" onClick={() => setShowPassword(!showPassword)}>
-                  {showPassword ? <Eye className="w-5 h-5 text-gray-400" /> : <EyeOff className="w-5 h-5 text-gray-400" />}
-                </button>
-              }
-            />
+      <div className="w-full max-w-[327px] mt-[14px] mx-[24px]">
+        <Formik
+          initialValues={{ username: "", email: "", password: "" }}
+          validate={(values) => {
+            const errors: { [key: string]: string } = {};
+            if (!values.username) errors.username = "Required";
+            if (!values.email) {
+              errors.email = "Required";
+            } else if (
+              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+            ) {
+              errors.email = "Invalid email address";
+            }
 
-            <div className="text-right">
-              <button
-                type="button"
-                className="text-teal-600 hover:text-teal-700"
-                onClick={() => router.push('/forgot-password', 'forward')}
-              >
-                パスワードを忘れましたか？
-              </button>
-            </div>
+            const lengthValid = values.password.length >= 8;
+            const hasNumber = /\d/.test(values.password);
+            const hasLetter = /[a-zA-Z]/.test(values.password);
+            if (!lengthValid || !hasNumber || !hasLetter) {
+              errors.password = "パスワード要件をすべて満たしてください。";
+            }
 
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? 'ログイン中...' : 'ログイン'}
-            </Button>
+            return errors;
+          }}
+          onSubmit={(values) => {
+            console.log("Register:", values);
+          }}
+        >
+          {({ handleSubmit, setFieldValue, values }) => {
+            const isPasswordStrong =
+              values.password.length >= 8 &&
+              /\d/.test(values.password) &&
+              /[a-zA-Z]/.test(values.password);
 
-            <p className="text-center text-gray-500">
-              アカウントをお持ちでないですか？{' '}
-              <span
-                className="text-teal-500 hover:text-teal-600 cursor-pointer"
-                onClick={() => router.push('/signup', 'forward')}
-              >
-                会員登録
-              </span>
-            </p>
-          </Form>
-        )}
-      </Formik>
+            return (
+              <form onSubmit={handleSubmit} className="space-y-[16px] ">
+                <InputField
+                  name="email"
+                  type="email"
+                  label="メール"
+                  placeholder="メールアドレス"
+                  icon={email}
+                  filledIcon={passwordFilled}
+                />
+
+                <InputField
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  label="パスワード"
+                  placeholder="パスワード"
+                  icon={password}
+                  filledIcon={passwordlFilled}
+                  onChange={(e) => {
+                    setFieldValue("password", e.target.value);
+                    if (!passwordTouched) setPasswordTouched(true);
+                  }}
+                  iconRight={
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                    >
+                      {showPassword ? (
+                        <Eye className="w-[24px] h-[24px] text-[#9CA3AF]" />
+                      ) : (
+                        <EyeOff className="w-[24px] h-[24px] text-[#9CA3AF]" />
+                      )}
+                    </button>
+                  }
+                />
+
+                <p className="text-[14px] font-normal leading-[140%] text-[#199A8E] text-end">
+                  パスワードを忘れましたか？
+                </p>
+
+                <div className="space-y-[24px] mt-[24px]">
+                  <Button
+                    type="submit"
+                    disabled={!values.email || !values.password}
+                  >
+                    ログイン
+                  </Button>
+
+                  <div className="text-[14px] font-normal leading-[140%] text-[#9CA3AF] text-center">
+                    アカウントをお持ちでないですか?
+                    <a href="/" className="underline text-[#199A8E]">
+                      会員登録
+                    </a>
+                  </div>
+                </div>
+              </form>
+            );
+          }}
+        </Formik>
+      </div>
     </div>
   );
 };

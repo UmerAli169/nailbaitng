@@ -1,22 +1,29 @@
-// src/views/shared/Button.tsx
-import React from 'react';
+import React from "react";
 
 interface ButtonProps {
-  type?: 'button' | 'submit';
+  type?: "button" | "submit";
+  onClick?: () => void;
   disabled?: boolean;
   children: React.ReactNode;
-  onClick?: () => void;
+  className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ type = 'button', disabled, children, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  type = "button",
+  onClick,
+  disabled = false,
+  children,
+  className = "",
+}) => {
   return (
     <button
       type={type}
-      disabled={disabled}
       onClick={onClick}
-      className={`w-full  py-[10px] px-[100px] text-[#FFFFFF] font-normal text-[16px] rounded-[8px] transition-colors ${
-        disabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#199A8E] hover:bg-teal-600'
-      }`}
+      disabled={disabled}
+      className={`w-full max-w-[327px] py-[16px] rounded-[12px] text-white text-[16px] font-normal transition
+        ${disabled ? "bg-[#D3FFF2] cursor-not-allowed" : "bg-[#199A8E] hover:opacity-90"}
+        ${className}
+      `}
     >
       {children}
     </button>

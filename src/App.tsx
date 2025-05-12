@@ -1,9 +1,14 @@
 import React from "react";
 import Splash from "./pages/SplahScreen/Splash";
-import SignIn from "./pages/AuthScreen/SignIn";
+// import SignIn from "./pages/AuthScreen/SignIn";
 import SignUp from "./pages/AuthScreen/SignUp";
 
-// import OnBoarding from "./pages/OnbardingScreen/OnBoarding_a";
+import OnBoarding from "./pages/OnbardingScreen/OnBoarding_a";
+import SignIn from "./pages/AuthScreen/SignIn";
+import VerifuEmail from "./pages/AuthScreen/VerifyOtp";
+import FeedBack from "./pages/AuthScreen/FeedBack";
+
+
 // import OnBoarding from "./pages/OnbardingScreen/OnBoarding_b";
 // import OnBoarding from "./pages/OnbardingScreen/OnBoarding_c";
 // import OnBoarding from "./pages/OnbardingScreen/OnBoarding_d";
@@ -13,8 +18,10 @@ function App() {
     <div className="flex justify-center items-center">
       {/* <Splash/> */}
       {/* <OnBoarding /> */}
-      <SignIn/>
+      {/* <SignIn/> */}
       {/* <SignUp/> */}
+      {/* <VerifuEmail/> */}
+      <FeedBack/>
 
     </div>
   );
