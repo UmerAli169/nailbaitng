@@ -10,7 +10,8 @@ import password from "../../assets/auth/password.svg";
 import { Check, Eye, EyeOff, X } from "lucide-react";
 import CheckIcon from "../../assets/shared/checkIcon.svg";
 import passwordlFilled from "../../assets/auth/filledPassword.svg";
-
+import TicK from "../../assets/auth/passwordTick.svg";
+import Cross from "../../assets/auth/passwordCross.svg";
 function NewPassword() {
   const [otp, setOtp] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -148,11 +149,11 @@ function NewPassword() {
                   }`}
                 >
                   {values.newPassword.length >= 8 ? (
-                    <Check className="text-green-500 w-4 h-4" />
+                    <IonIcon src={TicK} className=" w-[16px] h-[16px]" />
                   ) : (
-                    <X className="text-red-500 w-4 h-4" />
+                    <IonIcon src={Cross} className=" w-[16px] h-[16px]" />
                   )}
-                  <span className="text-sm">8文字以上で入力してください</span>
+                  <span className=" ml-[8px] text-[14px] font-normal leading-[140%]">8文字以上で入力してください</span>
                 </div>
                 <div
                   className={`flex items-center ${
@@ -162,11 +163,11 @@ function NewPassword() {
                   }`}
                 >
                   {/\d/.test(values.newPassword) ? (
-                    <Check className="text-green-500 w-4 h-4" />
+                    <IonIcon src={TicK} className=" w-[16px] h-[16px]" />
                   ) : (
-                    <X className="text-red-500 w-4 h-4" />
+                    <IonIcon src={Cross} className=" w-[16px] h-[16px]" />
                   )}
-                  <span className="text-sm">
+                  <span className="ml-[8px] text-[14px] font-normal leading-[140%]">
                     少なくとも1つの数字を含めてください
                   </span>
                 </div>
@@ -178,11 +179,11 @@ function NewPassword() {
                   }`}
                 >
                   {/[a-zA-Z]/.test(values.newPassword) ? (
-                    <Check className="text-green-500 w-4 h-4" />
+                    <IonIcon src={TicK} className=" w-[16px] h-[16px]" />
                   ) : (
-                    <X className="text-red-500 w-4 h-4" />
+                    <IonIcon src={Cross} className=" w-[16px] h-[16px]" />
                   )}
-                  <span className="text-sm">
+                  <span className=" ml-[8px] text-[14px] font-normal leading-[140%]">
                     少なくとも1つの文字を含めてください
                   </span>
                 </div>

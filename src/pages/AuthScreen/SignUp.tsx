@@ -9,6 +9,8 @@ import email from "../../assets/auth/email.svg";
 import password from "../../assets/auth/password.svg";
 import accountFilled from "../../assets/auth/accountFilled.svg";
 import passwordFilled from "../../assets/auth/passwordFilled.svg";
+import QuestionMark from "../../assets/auth/questioinmarl.svg";
+
 import passwordlFilled from "../../assets/auth/filledPassword.svg";
 import SuggestionIcon from "../../assets/shared/SuggestionIcon.svg";
 import CheckIcon from "../../assets/shared/checkIcon.svg";
@@ -17,6 +19,7 @@ import InputField from "../../components/shared/Input";
 import PasswordChecklist from "../../components/shared/PasswordCheck";
 import Checkbox from "../../components/shared/Checkbox";
 import Button from "../../components/shared/Button";
+import { IonIcon } from "@ionic/react";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -81,69 +84,76 @@ const SignUp = () => {
               /[a-zA-Z]/.test(values.password);
 
             return (
-              <form onSubmit={handleSubmit} className="space-y-[16px] mx-[24px]">
-                <InputField
-                  name="username"
-                  label="ニックネーム"
-                  placeholder="ニックネーム"
-                  icon={account}
-                  filledIcon={accountFilled}
-                />
+              <form onSubmit={handleSubmit} className="mx-[24px]">
+                <div className="space-y-[16px] ">
+                  <InputField
+                    name="username"
+                    label="ニックネーム"
+                    placeholder="ニックネーム"
+                    icon={account}
+                    filledIcon={accountFilled}
+                  />
 
-                <InputField
-                  name="email"
-                  type="email"
-                  label="メール"
-                  placeholder="メールアドレス"
-                  icon={email}
-                  filledIcon={passwordFilled}
-                />
+                  <InputField
+                    name="email"
+                    type="email"
+                    label="メール"
+                    placeholder="メールアドレス"
+                    icon={email}
+                    filledIcon={passwordFilled}
+                  />
 
-                <InputField
-                  name="password"
-                  type={showPassword ? "text" : "password"}
-                  label="パスワード"
-                  placeholder="パスワード"
-                  icon={password}
-                  filledIcon={passwordlFilled}
-                  onChange={(e) => {
-                    setFieldValue("password", e.target.value);
-                    if (!passwordTouched) setPasswordTouched(true);
-                  }}
-                  iconRight={
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2"
-                    >
-                      {showPassword ? (
-                        <Eye className="w-[24px] h-[24px] text-[#9CA3AF]" />
-                      ) : (
-                        <EyeOff className="w-[24px] h-[24px] text-[#9CA3AF]" />
-                      )}
-                    </button>
-                  }
-                />
+                  <InputField
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    label="パスワード"
+                    placeholder="パスワード"
+                    icon={password}
+                    filledIcon={passwordlFilled}
+                    onChange={(e) => {
+                      setFieldValue("password", e.target.value);
+                      if (!passwordTouched) setPasswordTouched(true);
+                    }}
+                    iconRight={
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                      >
+                        {showPassword ? (
+                          <Eye className="w-[24px] h-[24px] text-[#9CA3AF]" />
+                        ) : (
+                          <EyeOff className="w-[24px] h-[24px] text-[#9CA3AF]" />
+                        )}
+                      </button>
+                    }
+                  />
 
-                {values.password.length > 0 && !isPasswordStrong && (
-                  <div className="relative z-10">
-                    <PasswordChecklist password={values.password} />
-                  </div>
-                )}
-
-                <div className="flex items-center my-[16px] space-x-2">
+                </div>
+                  {values.password.length > 0 && !isPasswordStrong && (
+                    <div className="relative mt-[8px]">
+                      <PasswordChecklist password={values.password} />
+                    </div>
+                  )}
+                <div className="flex items-center mt-[10px]  mb-[16px]  space-x-[8px]">
                   <img
                     src={isPasswordStrong ? SuggestionIcon : CheckIcon}
                     className="w-[16px] h-[16px]"
                     alt="status"
                   />
                   <p className="text-[14px]  font-normal leading-[140%] text-[#9CA3AF]">
-                    {isPasswordStrong
-                      ? "いいね！とても強力なパスワードです！"
-                      : "パスワードの提案"}
+                    {isPasswordStrong ? (
+  "いいね！とても強力なパスワードです！"
+) : (
+  <div className="flex items-center space-x-1">
+    <span>パスワードの提案</span>
+    <IonIcon src={QuestionMark} className="w-4 h-4" />
+  </div>
+)}
+
                   </p>
                 </div>
-
+                      
                 <Checkbox
                   checked={agree}
                   onChange={() => setAgree(!agree)}
@@ -177,7 +187,7 @@ const SignUp = () => {
 
                   <div className="text-[14px] font-normal leading-[140%] text-[#9CA3AF] text-center">
                     アカウントをお持ちですか？{" "}
-                    <a href="/" className="underline text-[#199A8E]">
+                    <a href="/signin" className="underline text-[#199A8E]">
                       ログイン
                     </a>
                   </div>

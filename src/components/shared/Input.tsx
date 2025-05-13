@@ -29,14 +29,14 @@ const InputField: React.FC<InputFieldProps> = ({
 
   return (
     <div className="space-y-[8px]">
-      <label htmlFor={name} className="block text-black font-medium">
+      <label htmlFor={name} className="block text-[#111827] font-normal text-[16px] leading-[150%]">
         {label}
       </label>
       <div className="relative">
         <img
           src={isFilled ? filledIcon : icon}
           alt=""
-          className="absolute left-[12px] top-1/2 transform -translate-y-1/2 w-[24px] h-[24px] transition-all duration-300"
+          className="absolute left-[12px] top-1/2 transform -translate-y-1/2 w-[24px] h-[24px] "
         />
         <Field name={name}>
           {({ field }: any) => (
@@ -48,11 +48,11 @@ const InputField: React.FC<InputFieldProps> = ({
                 field.onChange(e);
                 if (onChange) onChange(e);
               }}
-              className={`w-full pl-12 pr-12 py-3 rounded-2xl bg-gray-50 border transition-all
+              className={`w-full pl-12 pr-12 py-3 text-[#111827] rounded-[12px] border bg-[#FFFFFF]
                 ${
                   hasError
-                    ? "border-red-500 focus:ring-red-500"
-                    : "border-gray-200 focus:ring-teal-500"
+                    ? "border-red-500 "
+                    : "border-gray-200 "
                 }
                 focus:outline-none `}
             />

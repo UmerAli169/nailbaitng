@@ -37,7 +37,7 @@ const SignIn = () => {
         />
       </div>
 
-      <div className="mt-[116px] ml-[24px] max-w-[278px] w-full space-y-[8px]">
+      <div className="mt-[116px] ml-[24px] max-w-[278px] w-full space-y-[11px]">
         <h1 className="text-[#111827] font-normal text-[24px] leading-[135%]">
           おかえりなさい
         </h1>
@@ -46,7 +46,7 @@ const SignIn = () => {
         </p>
       </div>
 
-      <div className="w-full  mt-[14px] ">
+      <div className="w-full  mt-[32px] ">
         <Formik
           initialValues={{ username: "", email: "", password: "" }}
           validate={(values) => {
@@ -74,13 +74,11 @@ const SignIn = () => {
           }}
         >
           {({ handleSubmit, setFieldValue, values }) => {
-            const isPasswordStrong =
-              values.password.length >= 8 &&
-              /\d/.test(values.password) &&
-              /[a-zA-Z]/.test(values.password);
-
             return (
-              <form onSubmit={handleSubmit} className="space-y-[16px] mx-[24px] ">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-[16px] mx-[24px] "
+              >
                 <InputField
                   name="email"
                   type="email"
@@ -105,7 +103,7 @@ const SignIn = () => {
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                      className="absolute right-[12px] top-1/2 transform -translate-y-1/2"
                     >
                       {showPassword ? (
                         <Eye className="w-[24px] h-[24px] text-[#9CA3AF]" />
@@ -116,9 +114,14 @@ const SignIn = () => {
                   }
                 />
 
-                <p className="text-[14px] font-normal leading-[140%] text-[#199A8E] text-end">
-                  パスワードを忘れましたか？
-                </p>
+                <div className="text-end">
+                  <a
+                    href="/forgot-password"
+                    className="text-[14px] font-normal leading-[140%] text-[#199A8E] mt-[16px]"
+                  >
+                    パスワードをお忘れですか？
+                  </a>
+                </div>
 
                 <div className="space-y-[24px] mt-[24px]">
                   <Button
@@ -130,7 +133,7 @@ const SignIn = () => {
 
                   <div className="text-[14px] font-normal leading-[140%] text-[#9CA3AF] text-center">
                     アカウントをお持ちでないですか?
-                    <a href="/" className="underline text-[#199A8E]">
+                    <a href="/signup" className="underline text-[#199A8E]">
                       会員登録
                     </a>
                   </div>

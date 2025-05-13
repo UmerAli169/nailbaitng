@@ -8,7 +8,7 @@ type CheckboxProps = {
 
 const Checkbox = ({ checked, onChange, label }: CheckboxProps) => {
   return (
-    <label className="flex items-start space-x-2 cursor-pointer">
+    <label className="flex items-start space-x-[8px] cursor-pointer">
       <input
         type="checkbox"
         checked={checked}

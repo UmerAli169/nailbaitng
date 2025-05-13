@@ -19,10 +19,10 @@ function App() {
       {/* <OnBoarding /> */}
       {/* <SignIn/> */}
       {/* <SignUp/> */}
-      <VerifuEmail/>
+      {/* <VerifuEmail/> */}
       {/* <FeedBack/> */}
-      {/* <ForgetPassword/> */}
-      {/* <CreateNewPassword/> */}
+      {/* <ForgetPa/>ssword/> */}
+      <CreateNewPassword/>
     </div>
   );
 }

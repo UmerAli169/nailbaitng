@@ -9,8 +9,7 @@ const VerifyCode = () => {
 
   const handleSubmit = () => {
     console.log("OTP Submitted:", otp);
-    // Trigger verification logic here
-  };
+    };
 
   return (
     <div className="w-full max-w-[768px] relative ">
@@ -27,7 +26,10 @@ const VerifyCode = () => {
         />
       </div>
 
-      <div className="mt-[116px] ml-[24px] max-w-[278px] w-full space-y-[8px]">
+<div className="mx-[24px]">
+
+
+      <div className="mt-[116px]  max-w-[278px] w-full space-y-[8px]">
         <h1 className="text-[#111827] font-normal text-[24px] leading-[135%]">
           認証コード
         </h1>
@@ -39,12 +41,13 @@ const VerifyCode = () => {
       <div className="w-full mx-auto mt-[41px] ">
         <OTPInput value={otp} onChange={setOtp} />
         <Button
-          className="mt-[31px] mx-[24px] "
+          className="mt-[31px]  "
           disabled={otp.length !== 5}
           onClick={handleSubmit}
         >
           認証
         </Button>
+      </div>
       </div>
     </div>
   );
