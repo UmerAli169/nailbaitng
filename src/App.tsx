@@ -1,13 +1,12 @@
 import React from "react";
 import Splash from "./pages/SplahScreen/Splash";
-// import SignIn from "./pages/AuthScreen/SignIn";
 import SignUp from "./pages/AuthScreen/SignUp";
-
-import OnBoarding from "./pages/OnbardingScreen/OnBoarding_a";
 import SignIn from "./pages/AuthScreen/SignIn";
 import VerifuEmail from "./pages/AuthScreen/VerifyOtp";
 import FeedBack from "./pages/AuthScreen/FeedBack";
-
+import OnBoarding from "./pages/OnbardingScreen/OnBoarding_a";
+import ForgetPassword from "./pages/AuthScreen/ForgotPassword";
+import CreateNewPassword from "./pages/AuthScreen/NewPassword";
 
 // import OnBoarding from "./pages/OnbardingScreen/OnBoarding_b";
 // import OnBoarding from "./pages/OnbardingScreen/OnBoarding_c";
@@ -20,9 +19,10 @@ function App() {
       {/* <OnBoarding /> */}
       {/* <SignIn/> */}
       {/* <SignUp/> */}
-      {/* <VerifuEmail/> */}
-      <FeedBack/>
-
+      <VerifuEmail/>
+      {/* <FeedBack/> */}
+      {/* <ForgetPassword/> */}
+      {/* <CreateNewPassword/> */}
     </div>
   );
 }

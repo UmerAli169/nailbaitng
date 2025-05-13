@@ -13,7 +13,7 @@ const VerifyCode = () => {
   };
 
   return (
-    <div className="w-full max-w-[768px] relative">
+    <div className="w-full max-w-[768px] relative ">
       <div>
         <img
           src={SignUP}
@@ -36,10 +36,10 @@ const VerifyCode = () => {
         </p>
       </div>
 
-      <div className="w-fit mx-auto mt-[41px] ">
+      <div className="w-full mx-auto mt-[41px] ">
         <OTPInput value={otp} onChange={setOtp} />
         <Button
-          className="mt-[31px] "
+          className="mt-[31px] mx-[24px] "
           disabled={otp.length !== 5}
           onClick={handleSubmit}
         >

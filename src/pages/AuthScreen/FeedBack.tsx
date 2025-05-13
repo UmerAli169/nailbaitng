@@ -7,7 +7,6 @@ import Button from "../../components/shared/Button";
 function SignUp() {
   return (
     <div className="w-full max-w-[768px] relative min-h-screen">
-      {/* Background Illustrations */}
       <IonIcon
         src={SignUP}
         className="min-w-[280px] min-h-[376px] absolute top-[-40px] right-0"
@@ -18,7 +17,7 @@ function SignUp() {
       />
       
       <div className="pt-[160px] px-[24px] w-full flex flex-col items-center">
-        <div className="w-full max-w-[327px] flex flex-col items-center space-y-[24px]">
+        <div className="w-full  flex flex-col items-center space-y-[24px]">
           <IonIcon
             src={Feedback}
             className="w-[124px] h-[124px]"
@@ -34,7 +33,7 @@ function SignUp() {
           </div>
           
           {/* Button */}
-          <Button className="w-full max-w-[327px] mt-[24px]">
+          <Button className="w-full mt-[24px]">
             ログイン
           </Button>
         </div>

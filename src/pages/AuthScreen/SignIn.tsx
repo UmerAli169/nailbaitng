@@ -23,7 +23,7 @@ const SignIn = () => {
   const [passwordTouched, setPasswordTouched] = useState(false);
 
   return (
-    <div className="w-full max-w-[768px] relative">
+    <div className="w-full max-w-[768px] relative ">
       <div>
         <img
           src={SignUP}
@@ -46,7 +46,7 @@ const SignIn = () => {
         </p>
       </div>
 
-      <div className="w-full max-w-[327px] mt-[14px] mx-[24px]">
+      <div className="w-full  mt-[14px] ">
         <Formik
           initialValues={{ username: "", email: "", password: "" }}
           validate={(values) => {
@@ -80,7 +80,7 @@ const SignIn = () => {
               /[a-zA-Z]/.test(values.password);
 
             return (
-              <form onSubmit={handleSubmit} className="space-y-[16px] ">
+              <form onSubmit={handleSubmit} className="space-y-[16px] mx-[24px] ">
                 <InputField
                   name="email"
                   type="email"
