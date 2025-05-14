@@ -10,13 +10,15 @@ import FeedBack from "./pages/AuthScreen/FeedBack";
 import OnBoarding from "./pages/OnbardingScreen/OnBoarding_a";
 import ForgetPassword from "./pages/AuthScreen/ForgotPassword";
 import CreateNewPassword from "./pages/AuthScreen/NewPassword";
+import MainLayout from './pages/MainScreen/MainLayout';
 
 function App() {
   return (
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
-          <Route exact path="/" render={() => <Redirect to="/signin" />} />
+          <Route exact path="/" render={() => <Redirect to="/main" />} />
+          <Route exact path="/main" component={MainLayout} />
 
           <Route exact path="/splash" component={Splash} />
 

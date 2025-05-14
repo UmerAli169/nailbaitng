@@ -129,26 +129,29 @@ const SignUp = () => {
                     }
                   />
                 </div>
-                {values.password.length > 0 && !isPasswordStrong && (
-                  <div className="relative mt-[8px]">
-                    <PasswordChecklist password={values.password} />
-                  </div>
-                )}
-                <div className="flex items-center mt-[10px]  mb-[16px]  space-x-[8px]">
-                  <img
-                    src={isPasswordStrong ? SuggestionIcon : CheckIcon}
-                    className="w-[16px] h-[16px]"
-                    alt="status"
-                  />
-                  <div className="text-[14px]  font-normal leading-[140%] text-[#9CA3AF]">
-                    {isPasswordStrong ? (
-                      "いいね！とても強力なパスワードです！"
-                    ) : (
-                      <div className="flex items-center space-x-1">
-                        <div>パスワードの提案</div>
-                        <IonIcon src={QuestionMark} className="w-4 h-4" />
-                       </div>
-                    )}
+                <div className="relative">
+                  {values.password.length > 0 && !isPasswordStrong && (
+                    <div className="absolute top-[18px] z-10 w-full bg-white ">
+                      <PasswordChecklist password={values.password} />
+                    </div>
+                  )}
+
+                  <div className="flex items-center mt-[10px] mb-[16px] space-x-[8px]">
+                    <img
+                      src={isPasswordStrong ? SuggestionIcon : CheckIcon}
+                      className="w-[16px] h-[16px]"
+                      alt="status"
+                    />
+                    <div className="text-[14px] font-normal leading-[140%] text-[#9CA3AF]">
+                      {isPasswordStrong ? (
+                        "いいね！とても強力なパスワードです！"
+                      ) : (
+                        <div className="flex items-center space-x-1">
+                          <div>パスワードの提案</div>
+                          <IonIcon src={QuestionMark} className="w-4 h-4" />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
 

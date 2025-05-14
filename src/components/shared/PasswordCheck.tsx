@@ -27,7 +27,7 @@ const PasswordChecklist = ({ password }: Props) => {
   if (allValid) return null;
 
   return (
-    <div className="   bg-[#ffffff] rounded-xl p-[10px] space-y-[8px] shadow-[0_4px_6px_0_#D3FFF2]">
+<div className=" rounded-[3px] p-[10px] space-y-[8px] shadow-[0px_4px_10px_#00000040] z-10">
       {checks.map((item, idx) => (
         <div
           key={idx}
