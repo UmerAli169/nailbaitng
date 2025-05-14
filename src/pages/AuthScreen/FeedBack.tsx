@@ -4,7 +4,7 @@ import BackArrow from "../../assets/shared/backArrow.svg";
 import Feedback from "../../assets/shared/feedback.svg";
 import Button from "../../components/shared/Button";
 
-function  SignUp() {
+function SignUp() {
   return (
     <div className="w-full max-w-[768px] relative min-h-screen">
       <IonIcon
@@ -15,14 +15,11 @@ function  SignUp() {
         src={BackArrow}
         className="min-w-[40px] min-h-[40px] absolute top-[60px] left-[16px]"
       />
-      
+
       <div className="pt-[160px] px-[24px] w-full flex flex-col items-center">
         <div className="w-full  flex flex-col items-center space-y-[20px]">
-          <IonIcon
-            src={Feedback}
-            className="w-[124px] h-[124px] mb-[20px]"
-          />
-          
+          <IonIcon src={Feedback} className="w-[124px] h-[124px] mb-[20px]" />
+
           <div className="w-full space-y-[8px] text-center">
             <h1 className="text-[#111827] font-normal text-[24px] leading-[135%]">
               アカウントが作成されました
@@ -31,10 +28,12 @@ function  SignUp() {
               アカウントが正常に作成されました。メールアドレスとパスワードで再度ログインできます。
             </p>
           </div>
-          
+          {/*           
           <Button className="w-full mt-[16px]">
             ログイン
-          </Button>
+          </Button> */}
+
+          <a href="/signin"> パスワードを更新</a>
         </div>
       </div>
     </div>

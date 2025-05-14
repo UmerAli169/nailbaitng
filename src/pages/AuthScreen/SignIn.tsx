@@ -37,7 +37,7 @@ const SignIn = () => {
         />
       </div>
 
-      <div className="mt-[116px] ml-[24px] max-w-[278px] w-full space-y-[11px]">
+      <div className="pt-[116px] ml-[24px] max-w-[278px] w-full space-y-[11px]">
         <h1 className="text-[#111827] font-normal text-[24px] leading-[135%]">
           おかえりなさい
         </h1>

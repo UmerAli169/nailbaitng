@@ -41,7 +41,7 @@ const SignUp = () => {
         />
       </div>
 
-      <div className="mt-[116px] ml-[24px] max-w-[278px] w-full space-y-[8px]">
+      <div className="pt-[116px] ml-[24px] max-w-[278px] w-full space-y-[8px]">
         <h1 className="text-[#111827] font-normal text-[24px] leading-[135%]">
           会員登録
         </h1>
@@ -128,32 +128,30 @@ const SignUp = () => {
                       </button>
                     }
                   />
-
                 </div>
-                  {values.password.length > 0 && !isPasswordStrong && (
-                    <div className="relative mt-[8px]">
-                      <PasswordChecklist password={values.password} />
-                    </div>
-                  )}
+                {values.password.length > 0 && !isPasswordStrong && (
+                  <div className="relative mt-[8px]">
+                    <PasswordChecklist password={values.password} />
+                  </div>
+                )}
                 <div className="flex items-center mt-[10px]  mb-[16px]  space-x-[8px]">
                   <img
                     src={isPasswordStrong ? SuggestionIcon : CheckIcon}
                     className="w-[16px] h-[16px]"
                     alt="status"
                   />
-                  <p className="text-[14px]  font-normal leading-[140%] text-[#9CA3AF]">
+                  <div className="text-[14px]  font-normal leading-[140%] text-[#9CA3AF]">
                     {isPasswordStrong ? (
-  "いいね！とても強力なパスワードです！"
-) : (
-  <div className="flex items-center space-x-1">
-    <span>パスワードの提案</span>
-    <IonIcon src={QuestionMark} className="w-4 h-4" />
-  </div>
-)}
-
-                  </p>
+                      "いいね！とても強力なパスワードです！"
+                    ) : (
+                      <div className="flex items-center space-x-1">
+                        <div>パスワードの提案</div>
+                        <IonIcon src={QuestionMark} className="w-4 h-4" />
+                       </div>
+                    )}
+                  </div>
                 </div>
-                      
+
                 <Checkbox
                   checked={agree}
                   onChange={() => setAgree(!agree)}

@@ -1,5 +1,4 @@
-import { Check, X } from "lucide-react";
-import TicK from "../../assets/auth/passwordTick.svg";
+import TicK from "../../assets/auth/passwordTick11.svg";
 import Cross from "../../assets/auth/passwordCross.svg";
 import { IonIcon } from "@ionic/react";
 

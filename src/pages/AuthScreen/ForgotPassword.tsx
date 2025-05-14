@@ -18,8 +18,8 @@ function ForgotPassword() {
         src={BackArrow}
         className="min-w-[40px] min-h-[40px] absolute top-[60px] left-[16px]"
       />
-      
-      <div className="pt-[116px] px-[24px] w-full  mx-auto"> 
+
+      <div className="pt-[116px] px-[24px] w-full  mx-auto">
         <div className="max-w-[327px] w-full space-y-[8px] mb-[24px]">
           <h1 className="text-[#111827] font-normal text-[24px] leading-[135%]">
             パスワードをリセット
@@ -47,7 +47,7 @@ function ForgotPassword() {
           }}
         >
           {({ handleSubmit, values, isValid }) => (
-            <form onSubmit={handleSubmit} >
+            <form onSubmit={handleSubmit}>
               <InputField
                 name="email"
                 type="email"
@@ -58,13 +58,14 @@ function ForgotPassword() {
               />
 
               <div className="mt-[416px]   mx-auto w-full ">
-                <Button
+                {/* <Button
                   type="submit"
                   disabled={!values.email || !isValid}
                   className="w-full"
-                >
-                  確認コードを送信
-                </Button>
+                > */}
+                確認コードを送信
+                <a href="/create-new-password"> 確認コードを送信</a>
+                {/* </Button> */}
               </div>
             </form>
           )}
