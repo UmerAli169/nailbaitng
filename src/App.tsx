@@ -7,7 +7,10 @@ import SignUp from "./pages/AuthScreen/SignUp";
 import SignIn from "./pages/AuthScreen/SignIn";
 import VerifuEmail from "./pages/AuthScreen/VerifyOtp";
 import FeedBack from "./pages/AuthScreen/FeedBack";
-import OnBoarding from "./pages/OnbardingScreen/OnBoarding_a";
+// import OnBoarding from "./pages/OnbardingScreen/OnBoarding_a";
+// import OnBoarding from "./pages/OnbardingScreen/OnBoarding_b";
+import OnBoarding from "./pages/OnbardingScreen/OnBoarding_c";
+
 import ForgetPassword from "./pages/AuthScreen/ForgotPassword";
 import CreateNewPassword from "./pages/AuthScreen/NewPassword";
 import MainLayout from './pages/MainScreen/MainLayout';
@@ -17,7 +20,7 @@ function App() {
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
-          <Route exact path="/" render={() => <Redirect to="/main" />} />
+          <Route exact path="/" render={() => <Redirect to="/signup" />} />
           <Route exact path="/main" component={MainLayout} />
 
           <Route exact path="/splash" component={Splash} />

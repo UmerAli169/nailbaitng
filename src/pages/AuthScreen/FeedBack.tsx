@@ -6,7 +6,7 @@ import Button from "../../components/shared/Button";
 
 function SignUp() {
   return (
-    <div className="w-full max-w-[768px] relative min-h-screen">
+    <div className="w-full max-w-[768px] relative min-h-screen mx-auto" >
       <IonIcon
         src={SignUP}
         className="min-w-[280px] min-h-[376px] absolute top-[-40px] right-0"
@@ -28,10 +28,10 @@ function SignUp() {
               アカウントが正常に作成されました。メールアドレスとパスワードで再度ログインできます。
             </p>
           </div>
-          {/*           
+                    
           <Button className="w-full mt-[16px]">
             ログイン
-          </Button> */}
+          </Button>
 
           <a href="/signin"> パスワードを更新</a>
         </div>

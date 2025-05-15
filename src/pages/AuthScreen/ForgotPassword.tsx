@@ -9,7 +9,7 @@ import passwordFilled from "../../assets/auth/passwordFilled.svg";
 
 function ForgotPassword() {
   return (
-    <div className="w-full max-w-[768px] relative min-h-screen ">
+    <div className="w-full max-w-[768px] mx-auto relative min-h-screen ">
       <IonIcon
         src={SignUP}
         className="min-w-[280px] min-h-[376px] absolute top-[-40px] right-0"
@@ -58,14 +58,14 @@ function ForgotPassword() {
               />
 
               <div className="mt-[416px]   mx-auto w-full ">
-                {/* <Button
+                <Button
                   type="submit"
                   disabled={!values.email || !isValid}
                   className="w-full"
-                > */}
+                >
                 確認コードを送信
+                </Button>
                 <a href="/create-new-password"> 確認コードを送信</a>
-                {/* </Button> */}
               </div>
             </form>
           )}

@@ -11,7 +11,7 @@ import Skip from "../../assets/shared/Onboarding/onboardingC/skip.svg";
 function OnBordinga() {
   return (
     <div>
-      <div className="bg-[#1D968B] h-full w-screen rounded-b-[63px]  min-h-[621px] max-w-[768px]  relative">
+      <div className="bg-[#1D968B] h-full rounded-b-[63px]  max-w-[768px] min-h-[621px] mx-auto  relative">
         <IonIcon src={Lines} className="min-w-[188px] min-h-[198px] " />
         <IonIcon
           src={Dshape}
@@ -29,7 +29,7 @@ function OnBordinga() {
         />
       </div>
 
-      <div className="flex items-center justify-between px-[27px] mt-[23px]  ">
+      <div className="flex items-center justify-between  mx-auto max-w-[768px] px-[27px] mt-[23px]  ">
         <p className="text-[16px] font-normal text-[#636466] leading-[130%]">
           アプリで、あなたの困りごとを軽減するエクササイズを学習できます
         </p>

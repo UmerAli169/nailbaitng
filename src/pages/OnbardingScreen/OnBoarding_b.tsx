@@ -11,10 +11,10 @@ import star from "../../assets/shared/Onboarding/star.svg";
 import sunshin from "../../assets/shared/Onboarding/sunshin.svg";
 import Skip from "../../assets/shared/Onboarding/onboardingB/skip.svg";
 
-function OnBordinga() {
+function OnBordingb() {
   return (
-    <div>
-      <div className="bg-[#1D968B] h-full w-screen rounded-b-[63px]  min-h-[621px] max-w-[768px]  relative">
+    <div className="w-full  max-w-[786px] mx-auto">
+      <div className="bg-[#1D968B] h-full  rounded-b-[63px]   min-h-[621px]   relative">
         <IonIcon src={Lines} className="min-w-[188px] min-h-[198px] " />
         <IonIcon
           src={Dshape}
@@ -73,4 +73,4 @@ function OnBordinga() {
   );
 }
 
-export default OnBordinga;
+export default OnBordingb;

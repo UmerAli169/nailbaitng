@@ -27,7 +27,7 @@ const SignUp = () => {
   const [passwordTouched, setPasswordTouched] = useState(false);
 
   return (
-    <div className="w-full max-w-[768px] relative  ">
+    <div className="w-full max-w-[768px] relative  mx-auto">
       <div>
         <img
           src={SignUP}

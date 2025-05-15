@@ -21,8 +21,8 @@ const Splash: React.FC = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full overflow-hidden max-w-[768px] flex justify-center items-center bg-[#2D5FA4] relative">
-      <div className="relative w-full h-full mx-auto">
+    <div className="h-screen w-full overflow-hidden max-w-[768px] mx-auto flex justify-center items-center bg-[#2D5FA4] relative">
+      <div className="relative w-full h-full ">
         <div
           className={`absolute top-1/2 left-1/2 z-0 rounded-full bg-white transform -translate-x-1/2 -translate-y-1/2
             transition-all duration-[2000ms] ease-in-out

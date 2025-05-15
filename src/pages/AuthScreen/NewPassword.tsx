@@ -33,7 +33,7 @@ function NewPassword() {
   };
 
   return (
-    <div className="w-full max-w-[768px] relative min-h-screen">
+    <div className="w-full max-w-[768px] mx-auto relative min-h-screen">
       <IonIcon
         src={SignUP}
         className="min-w-[280px] min-h-[376px] absolute top-[-40px] right-0"
@@ -192,13 +192,13 @@ function NewPassword() {
               </div>
 
               <div className="mt-[24px]">
-                {/* <Button
+                <Button
                   type="submit"
                   disabled={!otp || !isValid || otp.length < 5}
                   className="w-full"
                 >
                   パスワードを更新
-                </Button> */}
+                </Button>
                 <a href="/feedback">    パスワードを更新</a>
               </div>
             </form>

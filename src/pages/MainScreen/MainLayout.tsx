@@ -10,11 +10,11 @@ import {
 } from "@ionic/react";
 import { Redirect, Route, useLocation } from "react-router-dom";
 
-import home from "../../assets/main/home/home.svg";
-import clock from "../../assets/main/home/clock.svg";
-import news from "../../assets/main/home/news.svg";
-import compare from "../../assets/main/home/compre.svg"; 
-import profile from "../../assets/main/home/profile.svg";
+import home from "../../assets/main/navbar/home.svg";
+import clock from "../../assets/main/navbar/clock.svg";
+import news from "../../assets/main/navbar/news.svg";
+import compare from "../../assets/main/navbar/compre.svg"; 
+import profile from "../../assets/main/navbar/profile.svg";
 
 import Home from "./Home/Home";
 import News from "./News/News";
