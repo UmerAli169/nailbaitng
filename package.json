@@ -28,6 +28,8 @@
     "react-dom": "19.0.0",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4",
+    "react-youtube": "^10.1.0",
+    "recharts": "^2.15.3",
     "yup": "^1.6.1"
   },
   "devDependencies": {

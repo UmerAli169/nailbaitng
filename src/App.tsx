@@ -20,13 +20,10 @@ function App() {
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
-          <Route exact path="/" render={() => <Redirect to="/signup" />} />
+          <Route exact path="/" render={() => <Redirect to="/main" />} />
           <Route exact path="/main" component={MainLayout} />
-
           <Route exact path="/splash" component={Splash} />
-
           <Route exact path="/onboarding" component={OnBoarding} />
-
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/verify-email" component={VerifuEmail} />

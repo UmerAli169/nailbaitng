@@ -13,7 +13,7 @@ import { Redirect, Route, useLocation } from "react-router-dom";
 import home from "../../assets/main/navbar/home.svg";
 import clock from "../../assets/main/navbar/clock.svg";
 import news from "../../assets/main/navbar/news.svg";
-import compare from "../../assets/main/navbar/compre.svg"; 
+import compare from "../../assets/main/navbar/compre.svg";
 import profile from "../../assets/main/navbar/profile.svg";
 
 import Home from "./Home/Home";
@@ -23,6 +23,7 @@ import Profile from "./Profile/Profile";
 
 const MainLayout = () => {
   const location = useLocation();
+
 
   const tabs = [
     { tab: "home", label: "ホーム", href: "/home", icon: home },
