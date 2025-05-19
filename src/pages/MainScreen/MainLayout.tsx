@@ -18,7 +18,7 @@ import profile from "../../assets/main/navbar/profile.svg";
 
 import Home from "./Home/Home";
 import News from "./News/News";
-import Watch from "./StopWatch/Watch";
+import ViewAssessment from "./StopWatch/ViewAssessment";
 import Profile from "./Profile/Profile";
 import Assignment from "./Assignment/Assignment";
 
@@ -29,7 +29,7 @@ const MainLayout = () => {
     { tab: "home", label: "ホーム", href: "/home", icon: home },
     { tab: "input", label: "入力", href: "/input", icon: clock },
     { tab: "assignment", label: "評価", href: "/assignment", icon: assignment },
-    { tab: "compare", label: "比較", href: "/compare", icon: compare },
+    { tab: "ViewAssessment", label: "比較", href: "/ViewAssessment", icon: compare },
     { tab: "profile", label: "プロフィール", href: "/profile", icon: profile },
   ];
 
@@ -40,7 +40,7 @@ const MainLayout = () => {
           <Route path="/home" component={Home} exact />
           <Route path="/input" component={News} exact />
           <Route path="/assignment" component={Assignment} exact />
-          <Route path="/compare" component={Watch} exact />
+          <Route path="/ViewAssessment" component={ViewAssessment} exact />
           <Route path="/profile" component={Profile} exact />
           <Redirect exact from="/" to="/home" />
         </IonRouterOutlet>
