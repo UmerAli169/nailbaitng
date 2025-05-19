@@ -110,7 +110,7 @@ const CalendarGraph: React.FC<CalendarGraphProps> = ({
       {[...Array(3)].map((_, i) => (
         <span
           key={i}
-          className={`text-[10px] w-[6px]  ${  
+          className={`text-[10px] w-[6px]  ${
             i < count ? "text-yellow-400" : "text-gray-300"
           }`}
         >
@@ -175,7 +175,7 @@ const CalendarGraph: React.FC<CalendarGraphProps> = ({
                         stroke="#199A8E"
                         fill="#199A8E"
                         strokeWidth={2}
-                        dot={{ r: 2  }}
+                        dot={{ r: 2 }}
                         activeDot={{ r: 6 }}
                         connectNulls={false}
                       />
