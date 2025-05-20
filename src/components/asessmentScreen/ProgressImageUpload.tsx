@@ -76,9 +76,9 @@ const ProgressImageUpload: React.FC<ProgressImageUploadProps> = ({ onPreviewChan
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col ">
       {preview && (
-        <div className="w-80 h-48 bg-gray-100 border border-gray-300 rounded-md overflow-hidden mb-4">
+        <div className="w-full   h-48 bg-gray-100 border border-gray-300 rounded-md overflow-hidden mb-4">
           <img
             src={preview}
             alt="Progress preview"
@@ -92,8 +92,11 @@ const ProgressImageUpload: React.FC<ProgressImageUploadProps> = ({ onPreviewChan
   onClick={handleButtonClick}
   className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-md mb-4"
 >
-  <IonIcon src={compare}  />
+  <div className="w-full">
+  <IonIcon src={compare}  className="px-[10px]" />
+
   {preview ? "Change photo" : "ギャラリーからアップロード"}
+  </div>
 </button>
 
       <input

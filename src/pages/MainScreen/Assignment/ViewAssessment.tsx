@@ -7,7 +7,7 @@ function ViewAssessment() {
   const [activeTab, setActiveTab] = useState<"view" | "comparison">("view");
 
   return (
-    <div className="mx-auto w-full max-w-[768px]">
+    <div className="mx-auto w-full max-w-[768px] overflow-y-auto max-h-[90vh]">
       <h1 className="text-center my-[20px] text-[#111827] leading-[140%] text-[20px] font-normal">
         評価入力
       </h1>
@@ -36,7 +36,7 @@ function ViewAssessment() {
           </button>
         </div>
         <div className=" my-auto">
-          <IonIcon src={Cylinder} />
+         {activeTab === "view" ? (  <IonIcon src={Cylinder} />):(<></>)}
         </div>
       </div>
 
