@@ -18,7 +18,7 @@ import profile from "../../assets/main/navbar/profile.svg";
 
 import Home from "./Home/Home";
 import News from "./News/News";
-import ViewAssessment from "./StopWatch/ViewAssessment";
+import ViewAssessment from "./Assignment/ViewAssessment";
 import Profile from "./Profile/Profile";
 import Assignment from "./Assignment/Assignment";
 

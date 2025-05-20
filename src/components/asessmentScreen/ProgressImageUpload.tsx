@@ -54,7 +54,9 @@
 
 // export default ProgressImageUpload;
 // src/components/asessmentScreen/ProgressImageUpload.tsx
+import { IonIcon } from "@ionic/react";
 import React, { useState, useRef, ChangeEvent } from "react";
+import compare from "../../assets/main/assesment/uploader.svg";
 
 interface ProgressImageUploadProps {
   onPreviewChange?: (url: string | null) => void;
@@ -85,13 +87,14 @@ const ProgressImageUpload: React.FC<ProgressImageUploadProps> = ({ onPreviewChan
         </div>
       )}
 
-      <button
-        type="button"
-        onClick={handleButtonClick}
-        className="px-4 py-2 bg-teal-600 text-white rounded-md mb-4"
-      >
-        {preview ? "Change photo" : "ギャラリーからアップロード"}
-      </button>
+     <button
+  type="button"
+  onClick={handleButtonClick}
+  className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-md mb-4"
+>
+  <IonIcon src={compare}  />
+  {preview ? "Change photo" : "ギャラリーからアップロード"}
+</button>
 
       <input
         type="file"
