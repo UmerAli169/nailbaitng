@@ -1,0 +1,58 @@
+{
+  "data": {
+    "news": [
+      {
+        "_id": "1",
+        "title": "React 19 Released: What’s New?",
+        "body": "React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.",
+        "postedAt": "2025-05-20T10:30:00.000Z"
+      },
+      {
+        "_id": "2",
+        "title": "Tailwind CSS v4 Launches",
+        "body": "The latest version of Tailwind CSS introduces native dark mode and better tog supportReact 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.",
+        "postedAt": "2025-05-19T14:15:00.000Z"
+      },
+      {
+        "_id": "3",
+        "title": "TypeScript 5.5 Features Preview",
+        "body": "TypeScript 5.5 preview is here, with enhanced inference and stricter null chReact 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.",
+        "postedAt": "2025-05-18T09:00:00.000Z"
+      }, {
+        "_id": "4",
+        "title": "React 19 Released: What’s New?",
+        "body": "React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.",
+        "postedAt": "2025-05-20T10:30:00.000Z"
+      },
+      {
+        "_id": "5",
+        "title": "Tailwind CSS v4 Launches",
+        "body": "The latest version of Tailwind CSS introduces native dark mode and better tog supportReact 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.",
+        "postedAt": "2025-05-19T14:15:00.000Z"
+      },
+      {
+        "_id": "6",
+        "title": "TypeScript 5.5 Features Preview",
+        "body": "TypeScript 5.5 preview is here, with enhanced inference and stricter null chReact 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler..",
+        "postedAt": "2025-05-18T09:00:00.000Z"
+      }, {
+        "_id": "7",
+        "title": "React 19 Released: What’s New?",
+        "body": "React 19 brings major performance improvements and a more powerful compilerReact 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler..",
+        "postedAt": "2025-05-20T10:30:00.000Z"
+      },
+      {
+        "_id": "8",
+        "title": "Tailwind CSS v4 Launches",
+        "body": "The latest version of Tailwind CSS introduces native dark mode and better tog support.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.",
+        "postedAt": "2025-05-19T14:15:00.000Z"
+      },
+      {
+        "_id": "9",
+        "title": "TypeScript 5.5 Features Preview",
+        "body": "TypeScript 5.5 preview is here, with enhanced inference and stricter null chReact 19 brings major performance improvements and a more powerful compiler.React 19 brings major performance improvements and a more powerful compiler.",
+        "postedAt": "2025-05-18T09:00:00.000Z"
+      }
+    ]
+  }
+}

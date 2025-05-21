@@ -18,7 +18,7 @@ function View() {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       {assessments.map((assessment, index) => (
         <div
           key={index}

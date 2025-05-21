@@ -133,28 +133,30 @@ function Home() {
         style={{ height: `${availableHeight}px` }}
       >
         <div>
-
-        <div className="flex items-center justify-between mb-[10px]">
-          <div className="text-[16px] text-teal-600 font-normal">{`${year}年${month}月`}</div>
-          <div className="flex gap-2 items-center">
-            <button onClick={handlePreviousMonth}>
-              <LeftArrowIcon />
-            </button>
-            <button onClick={handleNextMonth}>
-              <RightArrowIcon />
-            </button>
+          <div className="flex items-center justify-between mb-[10px]">
+            <div className="text-[16px] text-teal-600 font-normal">{`${year}年${month}月`}</div>
+            <div className="flex gap-2 items-center">
+              <button onClick={handlePreviousMonth}>
+                <LeftArrowIcon />
+              </button>
+              <button onClick={handleNextMonth}>
+                <RightArrowIcon />
+              </button>
+            </div>
           </div>
+          <CalendarGraph
+            year={year}
+            month={month}
+            assessmentData={assessmentData}
+          />{" "}
         </div>
-
-        <CalendarGraph
-          year={year}
-          month={month}
-          assessmentData={assessmentData}
-        />        </div>
 
         <div className="flex justify-between items-center  mt-[5px]">
           <span className="text-sm font-medium text-[#181A20]">お知らせ</span>
-          <span className="text-sm text-[#3B82F6] cursor-pointer">
+          <span
+            onClick={() => history.push(`/news`)}
+            className="text-sm text-[#3B82F6] cursor-pointer"
+          >
             すべて表示
           </span>
         </div>
