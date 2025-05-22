@@ -37,19 +37,30 @@ const Email = () => {
           onSubmit={handleEmailSubmit}
         >
           {({ handleSubmit }) => (
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-[16px] mx-[26px] "
-            >
+            <form onSubmit={handleSubmit} className="space-y-[16px] mx-[26px] ">
               <InputField
                 name="email"
                 type="email"
                 label="メールアドレス"
                 placeholder="メールアドレスを入力"
-                icon={accountFilled}
+                icon={accountFilled}  
                 filledIcon={accountFilled}
               />
-
+              {emailSubmitted && (
+                <div className="w-full mx-auto mt-[41px]">
+                  <div className="mb-[46px] mt-[20px] text-[#101010] ">
+                    <h1 className="text-start  leading-[140%] text-[20px] font-normal">
+                      Verify Code{" "}
+                    </h1>
+                    <p className="text-[16px] leading-[150%]">
+                      Please enter the code we just sent to email
+                      example@gmail.com
+                    </p>
+                  </div>
+                  <OTPInput value={otp} onChange={setOtp} />
+                  <p className="mt-[20px] text-[#101010] text-center text-[16px] ">Code not received yet <span className="underline"> Resend code</span></p>
+                </div>
+              )}
               <div className="w-full pt-[24px] flex justify-end">
                 <button
                   type="submit"
@@ -61,19 +72,6 @@ const Email = () => {
             </form>
           )}
         </Formik>
-
-        {emailSubmitted && (
-          <div className="w-full mx-auto mt-[41px]">
-            <OTPInput value={otp} onChange={setOtp} />
-            <Button
-              className="mt-[31px]"
-              disabled={otp.length !== 5}
-              onClick={handleOTPSubmit}
-            >
-              認証
-            </Button>
-          </div>
-        )}
       </div>
     </div>
   );
